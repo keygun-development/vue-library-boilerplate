@@ -1,10 +1,13 @@
 {
-  "name": "vue-library-boilerplate",
+  "name": "@keygun-development/vue-library-boilerplate",
   "version": "1.0.0",
   "description": "A simple library boilerplate for Vue, with TypeScript and JavaScript support.",
   "main": "./dist/index.umd.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
