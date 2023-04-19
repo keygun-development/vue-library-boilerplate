@@ -1,18 +1,46 @@
-# Vue 3 + TypeScript + Vite
+# Vue HelloWorld Component
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+A simple "Hello World" component for Vue.js. This is just a simple example of how to create a Vue.js package that's compatible with Javascript and Typescript.
 
-## Recommended IDE Setup
+## Installation
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```bash
+# Clone the repository
+git clone https://github.com/keygun-development/ts-js-package-boilerplate.git
 
-## Type Support For `.vue` Imports in TS
+# Install dependencies
+npm run install
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+# Bundle the package
+npm run build
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+# Create the package
+npm pack
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+# Install the package
+npm install ../path/to/package.tgz
+```
+
+## Usage
+
+```javascript
+// In a ts, tsx, js, jsx, vue file
+
+import { HelloWorld } from "test-ts-app";
+```
+You can now use this component inside your Vue.js application.
+
+```html
+<template>
+    <HelloWorld />
+</template>
+```
+Now create your own imaginary Vue.js package using this boilerplate and publish it to NPM!🚀
+
+## References
+
+Check out these resources to learn more about Vue.js, Vite, Typescript, and vite-plugin-dts.
+- [Vue.js](https://vuejs.org/)
+- [Vite](https://vitejs.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+- [vite-plugin-dts](https://github.com/qmhc/vite-plugin-dts)

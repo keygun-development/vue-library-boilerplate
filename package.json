@@ -1,19 +1,43 @@
 {
-  "name": "test-ts-app",
-  "private": true,
-  "version": "0.0.0",
-  "main": "./dist/index.js",
-  "types": "./dist/types/index.d.ts",
-  "type": "module",
+  "name": "vue-library-boilerplate",
+  "version": "1.0.0",
+  "description": "A simple library boilerplate for Vue, with TypeScript and JavaScript support.",
+  "main": "./dist/index.umd.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && tsc ./index.ts --declaration --emitDeclarationOnly --jsx react --esModuleInterop --outDir dist",
+    "build": "vue-tsc && vite build",
     "preview": "vite preview"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keygun-development/vue-library-boilerplate.git"
+  },
+  "keywords": [
+    "vue",
+    "component",
+    "typescript",
+    "javascript",
+    "hello",
+    "world"
+  ],
+  "author": "Keagan Mulder",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "@types/node": "^18.15.11",
     "path": "^0.12.7",
     "tslib": "^2.5.0",
+    "vite-plugin-dts": "^2.3.0",
     "vue": "^3.2.47"
   },
   "devDependencies": {
